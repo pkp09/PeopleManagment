@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="customerService" class="com.spring.aop.test.CustomerService">
+		<property name="name" value="Yong Mook Kim" />
+		<property name="url" value="http://www.mkyong.com" />
+	</bean>
+	<bean id="customerService1" class="com.spring.aop.test.CustomerService1">
+		<property name="name" value="Yong Mook Kim" />
+		<property name="url" value="http://www.mkyong.com" />
+	</bean>
+
+	<bean id="hijackBeforeMethodBean" class="com.spring.aop.test.HijackBeforeMethod" />
+
+	<bean id="customerServiceProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+
+		<property name="target" ref="customerService" />
+		<!-- <property name="target" ref="customerService1" /> -->
+
+		<property name="interceptorNames">
+			<list>
+				<value>hijackBeforeMethodBean</value>
+			</list>
+		</property>
+	</bean>
+
+
+	<bean id="hijackAfterMethodBean" class="com.spring.aop.test.HijackAfterMethod" />
+
+	<bean id="customerServiceProxy1" class="org.springframework.aop.framework.ProxyFactoryBean">
+
+		<property name="target" ref="customerService" />
+
+		<property name="interceptorNames">
+			<list>
+				<value>hijackAfterMethodBean</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="hijackThrowExceptionBean" class="com.spring.aop.test.HijackThrowException" />
+
+	<bean id="customerServiceProxy2" class="org.springframework.aop.framework.ProxyFactoryBean">
+
+		<property name="target" ref="customerService" />
+
+		<property name="interceptorNames">
+			<list>
+				<value>hijackThrowExceptionBean</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="hijackAroundMethodBean" class="com.spring.aop.test.HijackAroundMethod" />
+
+	<bean id="customerServiceProxy3" class="org.springframework.aop.framework.ProxyFactoryBean">
+
+		<property name="target" ref="customerService" />
+
+		<property name="interceptorNames">
+			<list>
+				<value>hijackAroundMethodBean</value>
+			</list>
+		</property>
+	</bean>
+
+
+
+
+	<bean id="customerPointcut" class="org.springframework.aop.support.NameMatchMethodPointcut">
+		<property name="mappedName" value="printName" />
+	</bean>
+
+	<bean id="customerAdvisor" class="org.springframework.aop.support.DefaultPointcutAdvisor">
+		<property name="pointcut" ref="customerPointcut" />
+		<property name="advice" ref="hijackAroundMethodBeanAdvice" />
+	</bean>
+</beans>

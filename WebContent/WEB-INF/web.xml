@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	version="2.4">
+
+	<context-param>
+		<param-name>propertyFile</param-name>
+		<param-value>D:\ProjectBackup\PeopleManagment\PeopleManagment_Properties.properties</param-value>
+	</context-param>
+	<servlet>
+		<servlet-name>UserLoginServlet</servlet-name>
+		<servlet-class>com.people.login.UserLoginServlet</servlet-class>
+		<!-- <load-on-startup>1</load-on-startup> -->
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UserLoginServlet</servlet-name>
+		<url-pattern>/jsps/login</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UserLogoutServlet</servlet-name>
+		<servlet-class>com.people.login.UserLogoutServlet</servlet-class>
+		<!-- <load-on-startup>2</load-on-startup> -->
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UserLogoutServlet</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UserRegistrationServlet</servlet-name>
+		<servlet-class>com.people.registration.UserRegistrationServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UserRegistrationServlet</servlet-name>
+		<url-pattern>/jsps/Registration</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>UserRegistrationServlet</servlet-name>
+		<url-pattern>/jsps/Search</url-pattern>
+	</servlet-mapping>
+
+<servlet-mapping>
+		<servlet-name>UserRegistrationServlet</servlet-name>
+		<url-pattern>/jsps/Modify</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UserForgetPasswordServlet</servlet-name>
+		<servlet-class>com.people.login.UserLoginServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UserForgetPasswordServlet</servlet-name>
+		<url-pattern>/jsps/UserForgetPasswordServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UserResetPasswordServlet</servlet-name>
+		<servlet-class>com.people.registration.UserRegistrationServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UserResetPasswordServlet</servlet-name>
+		<url-pattern>/jsps/UserResetPasswordServlet</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- <error-page>
+		<error-code>400</error-code>
+		<location>/errorpages/error400.html</location>
+	</error-page>
+	<error-page>
+		<error-code>401</error-code>
+		<location>/errorpages/error401.html</location>
+	</error-page>
+	<error-page>
+		<error-code>403</error-code>
+		<location>/errorpages/error403.html</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/errorpages/error404.html</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/errorpages/error500.html</location>
+	</error-page>
+	<error-page>
+		<error-code>503</error-code>
+		<location>/errorpages/error503.html</location>
+	</error-page>
+
+
+
+
+<error-page>
+		<exception-type>400</exception-type>
+		<location>/errorpages/error400.html</location>
+	</error-page>
+	<error-page>
+		<exception-type>401</exception-type>
+		<location>/errorpages/error401.html</location>
+	</error-page>
+	<error-page>
+		<exception-type>403</exception-type>
+		<location>/errorpages/error403.html</location>
+	</error-page>
+	<error-page>
+		<exception-type>404</exception-type>
+		<location>/errorpages/error404.html</location>
+	</error-page>
+	<error-page>
+		<exception-type>500</exception-type>
+		<location>/errorpages/error500.html</location>
+	</error-page>
+	<error-page>
+		<exception-type>503</exception-type>
+		<location>/errorpages/error503.html</location>
+	</error-page> -->
+	
+	
+	<welcome-file-list>
+		<welcome-file>people_managment_welcome.jsp</welcome-file>
+	</welcome-file-list>
+	
+	
+	
+</web-app>

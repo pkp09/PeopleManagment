@@ -1,0 +1,95 @@
+<!-- href="<%=request.getContextPath()%>" -->
+
+
+String path = request.getContextPath(); 
+response.sendRedirect(response.encodeRedirectURL(p ath+"/quiz.jsp"));
+
+
+<!-- <link rel="stylesheet" type="text/css" href="css/peopelmanagment.css"> -->
+
+<script src="js/peoplemanagment.js">
+
+/***************
+
+if (objUserRegistrationDbObj.getUserId() != null && !"".equals(objUserRegistrationDbObj.getUserId()))
+         ps.setString(1, objUserRegistrationDbObj.getUserId());
+      else
+         ps.setString(1, "");
+      if (objUserRegistrationDbObj.getUserName() != null && !"".equals(objUserRegistrationDbObj.getUserName()))
+         ps.setString(2, objUserRegistrationDbObj.getUserName());
+      else
+         ps.setString(2, "");
+      if (objUserRegistrationDbObj.getEmail() != null && !"".equals(objUserRegistrationDbObj.getEmail()))
+         ps.setString(3, objUserRegistrationDbObj.getEmail());
+      else
+         ps.setString(3, "");
+      if (objUserRegistrationDbObj.getPhone() != null && !"".equals(objUserRegistrationDbObj.getPhone()))
+         ps.setString(4, objUserRegistrationDbObj.getPhone());
+      else
+         ps.setString(4, "");
+      if (objUserRegistrationDbObj.getMobile() != null && !"".equals(objUserRegistrationDbObj.getMobile()))
+         ps.setString(5, objUserRegistrationDbObj.getMobile());
+      else
+         ps.setString(5, "");
+      if (objUserRegistrationDbObj.getDob() != null && !"".equals(objUserRegistrationDbObj.getDob()))
+         ps.setString(6, objUserRegistrationDbObj.getDob());
+      else
+         ps.setString(6, "");
+         
+         
+         /**********************
+         
+         <%
+				Map<String, ArrayList<String>> map = (Map<String, ArrayList<String>>) request.getAttribute("ResultTable");
+				if (map.size() > 0) {
+					ArrayList<String> al = new ArrayList<String>();
+					for (Map.Entry<String, ArrayList<String>> entry : map
+							.entrySet()) {
+						System.out.println("Key = " + entry.getKey() + ", Value = "
+								+ entry.getValue());
+						al = entry.getValue();
+						for (String s : al) {
+							out.println(s);
+						}
+					}
+				}
+			%>
+			
+			
+			/**********
+			<jsp:plugin code="" codebase="" type="bean">
+					<jsp:params>
+					<jsp:param name="UserDetail.userId" value="UserDetail.userId"></jsp:param>
+					</jsp:params>
+					</jsp:plugin>
+					
+					
+					/****************
+					<!-- <input type="text" class="inputtext" name="gender" id="gender" /> -->
+
+				<!-- <select>
+  					<option value="Male">Male</option>
+  					<option value="Female">Female</option>
+				</select> -->
+				
+				
+	<!-- <td height="50"><input type="text" class="inputtext" name="nationality" id="nationality" /> -->
+	
+	
+	
+
+			<% 
+			ArrayList<String> al = (ArrayList<String>) request.getAttribute("error_message");
+			%>	
+			</tr>
+			
+			
+			
+			
+			
+			if (boolean == false)
+		document.getElementById("RegistrationForm").submit();
+		
+		
+		<button type="button"
+					name="reset" value="reset" id="reset"><img src="../img/ResetF.png" alt="Reset" />Reset</button>

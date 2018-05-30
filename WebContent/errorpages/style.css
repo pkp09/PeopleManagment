@@ -1,0 +1,75 @@
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: x-small; BACKGROUND-IMAGE: url(header.gif); PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #333; PADDING-TOP: 0px; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Verdana, Arial, Helvetica, SunSans-Regular, Sans-Serif; BACKGROUND-COLOR: #fff
+}
+#header {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FONT-SIZE: xx-small; PADDING-BOTTOM: 3px; MARGIN: 0px; WIDTH: 600px; PADDING-TOP: 3px
+}
+#navi {
+	PADDING-RIGHT: 10px; MARGIN-TOP: 40px; PADDING-LEFT: 9px; FONT-WEIGHT: bold; FONT-SIZE: x-small; PADDING-BOTTOM: 4px; WIDTH: 100%; PADDING-TOP: 4px; BACKGROUND-COLOR: #e8edf1
+}
+#inhalt {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 10px; WIDTH: 620px; PADDING-TOP: 0px
+}
+#footer {
+	PADDING-RIGHT: 0px; BORDER-TOP: #333 1px solid; PADDING-LEFT: 0px; FONT-SIZE: xx-small; PADDING-BOTTOM: 3px; MARGIN: 30px 10px; WIDTH: 620px; PADDING-TOP: 3px
+}
+P {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 5px; MARGIN: 0px; PADDING-TOP: 5px
+}
+H2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 5px; MARGIN: 0px; PADDING-TOP: 5px
+}
+H1 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: small; PADDING-BOTTOM: 8px; COLOR: #00365a; PADDING-TOP: 8px
+}
+H2 {
+	FONT-WEIGHT: bold; FONT-SIZE: x-small; COLOR: #00365a
+}
+H3 {
+	FONT-WEIGHT: bold; FONT-SIZE: xx-small; COLOR: #00365a
+}
+CODE {
+	FONT-SIZE: x-small; COLOR: #000
+}
+LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; LIST-STYLE-POSITION: outside; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: square
+}
+UL {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; LIST-STYLE-POSITION: outside; PADDING-BOTTOM: 0px; MARGIN: 0px 12px; PADDING-TOP: 0px; LIST-STYLE-TYPE: square
+}
+A {
+	COLOR: #ec6503; TEXT-DECORATION: underline
+}
+A:visited {
+	COLOR: #ec6503; TEXT-DECORATION: underline
+}
+A:hover {
+	COLOR: #00365a; TEXT-DECORATION: underline
+}
+#navi A {
+	COLOR: #00365a; TEXT-DECORATION: none
+}
+#navi A:visited {
+	COLOR: #00365a; TEXT-DECORATION: none
+}
+#header A {
+	COLOR: #00365a; TEXT-DECORATION: none
+}
+#header A:visited {
+	COLOR: #00365a; TEXT-DECORATION: none
+}
+#footer A {
+	COLOR: #00365a; TEXT-DECORATION: none
+}
+#footer A:visited {
+	COLOR: #00365a; TEXT-DECORATION: none
+}
+#navi A:hover {
+	COLOR: #ec6503; TEXT-DECORATION: none
+}
+#header A:hover {
+	COLOR: #ec6503; TEXT-DECORATION: none
+}
+#footer A:hover {
+	COLOR: #ec6503; TEXT-DECORATION: none
+}
